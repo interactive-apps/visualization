@@ -7,7 +7,7 @@
 
 # Visualization Library
 
-Starter javascript app to help developing, building and testing ES6 javascript libraries with ease
+Library to do heavy lifting of the ground work for visualization of analytics data, abstracting interaction of developer with analytics data sources.
 
 ## Prequisites
 
