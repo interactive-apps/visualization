@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "build-lib": "webpack --config webpack.config.lib.js && cp dist/lib/*.min.js demo/src/",
+    "build-lib": "webpack --config webpack.config.lib.js && cp dist/lib/*.min.js demo/src/ && npm run docs",
+    "build-lib-test": "webpack --config webpack.config.lib.js",
     "start:browser": "npm run build-lib && webpack-dev-server --config webpack.dev.js --open",
     "start:node": "nodemon --exec babel-node demo/src/index.js",
-    "test": "npm run build-lib && cross-env NODE_ENV=test nyc mocha --require @babel/register --colors ./test/*.spec.js",
+    "test": "npm run build-lib-test && cross-env NODE_ENV=test nyc mocha --require @babel/register --colors ./__tests__/*.spec.js",
     "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
     "publish": "npm run build && cd dist/lib && npm publish --access public"
   },

@@ -12,8 +12,6 @@ Vn.init({
 describe('Given an initial instance', () => {
   const instance = Vn.getInstance();
 
-  console.log(instance);
-
   it('Check if instance is ready', () => {
     expect(instance !== undefined).to.be.equal(true);
   });
