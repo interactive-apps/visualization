@@ -36,6 +36,12 @@ module.exports = {
       commonjs2: 'lodash',
       amd: 'lodash',
       root: '_'
+    },
+    Fn: {
+      commonjs: 'Fn',
+      commonjs2: 'Fn',
+      amd: 'Fn',
+      root: 'Fn'
     }
   },
   module: {

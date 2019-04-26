@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "build-lib": "webpack --config webpack.config.lib.js && cp dist/lib/*.min.js demo/src/",
+    "build-lib": "webpack --config webpack.config.lib.js && cp dist/lib/*.min.js demo/src/ && npm run docs",
     "start:browser": "npm run build-lib && webpack-dev-server --config webpack.dev.js --open",
     "start:node": "nodemon --exec babel-node demo/src/index.js",
     "test": "npm run build-lib && cross-env NODE_ENV=test nyc mocha --require @babel/register --colors ./test/*.spec.js",
@@ -63,6 +63,7 @@
     "instrument": false
   },
   "dependencies": {
+    "@iapps/function-analytics": "^1.0.0-beta.4",
     "d2": "^31.4.0",
     "lodash": "^4.17.11"
   },
