@@ -1,5 +1,5 @@
 import chai from 'chai';
-import { Vn } from '../dist/lib/visualization.min';
+import Vn from '../dist/lib/visualization.min';
 
 const expect = chai.expect;
 
@@ -10,10 +10,12 @@ Vn.init({
 });
 
 describe('Given an initial instance', () => {
-  const instance = new Vn.Instance();
+  const instance = Vn.getInstance();
+
+  console.log(instance);
 
   it('Check if instance is ready', () => {
-    expect(instance.instance !== undefined).to.be.equal(true);
+    expect(instance !== undefined).to.be.equal(true);
   });
 
   it('Check if instanse configuration is set', () => {
