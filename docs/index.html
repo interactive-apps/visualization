@@ -26,7 +26,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Instance.html">Instance</a><ul class='methods'><li data-type='method'><a href="Instance.html#.initializeInstance">initializeInstance</a></li></ul></li><li><a href="Selection.html">Selection</a><ul class='methods'><li data-type='method'><a href="Selection.html#get">get</a></li><li data-type='method'><a href="Selection.html#setConfiguration">setConfiguration</a></li><li data-type='method'><a href="Selection.html#setData">setData</a></li><li data-type='method'><a href="Selection.html#setDimension">setDimension</a></li><li data-type='method'><a href="Selection.html#setLayer">setLayer</a></li><li data-type='method'><a href="Selection.html#setLayout">setLayout</a></li><li data-type='method'><a href="Selection.html#setOrgUnit">setOrgUnit</a></li><li data-type='method'><a href="Selection.html#setPeriod">setPeriod</a></li></ul></li><li><a href="View.html">View</a><ul class='methods'><li data-type='method'><a href="View.html#draw">draw</a></li><li data-type='method'><a href="View.html#setType">setType</a></li><li data-type='method'><a href="View.html#setUiPreferences">setUiPreferences</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#Vn">Vn</a></li></ul>
 </nav>
 
 <div id="main">
@@ -56,26 +56,37 @@
 
 
     <section class="readme">
-        <article><p><a href="https://travis-ci.org/rajey/es6-library-starter"><img src="https://travis-ci.org/rajey/es6-library-starter.svg?branch=master" alt="Build Status"></a>
-<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Frajey%2Fes6-library-starter?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Frajey%2Fes6-library-starter.svg?type=shield" alt="FOSSA Status"></a>
-<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/rajey/es6-library-starter.svg" alt="Greenkeeper badge"></a>
-<a href="https://codeclimate.com/github/rajey/es6-library-starter/maintainability"><img src="https://api.codeclimate.com/v1/badges/02ee03f17f8891ad73ed/maintainability" alt="Maintainability"></a>
-<a href="https://codeclimate.com/github/rajey/es6-library-starter/test_coverage"><img src="https://api.codeclimate.com/v1/badges/02ee03f17f8891ad73ed/test_coverage" alt="Test Coverage"></a></p>
-<h1>ES6 Library starter</h1><p>Starter javascript app to help developing, building and testing ES6 javascript libraries with ease</p>
-<h1>Prequisites</h1><ul>
+        <article><h1>Vn</h1><p><a href="https://travis-ci.org/interactive-apps/visualization"><img src="https://travis-ci.org/interactive-apps/visualization.svg?branch=master" alt="Build Status"></a>
+<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/interactive-apps/visualization.svg" alt="Greenkeeper badge"></a>
+<a href="https://codeclimate.com/github/interactive-apps/visualization/maintainability"><img src="https://api.codeclimate.com/v1/badges/02ee03f17f8891ad73ed/maintainability" alt="Maintainability"></a>
+<a href="https://codeclimate.com/github/interactive-apps/visualization/test_coverage"><img src="https://api.codeclimate.com/v1/badges/02ee03f17f8891ad73ed/test_coverage" alt="Test Coverage"></a></p>
+<h1>Visualization Library</h1><p>Library to do heavy lifting of the ground work for visualization of analytics data, abstracting interaction of developer with analytics data sources.</p>
+<h2>Prequisites</h2><ul>
 <li>node</li>
+<li>git</li>
+<li>npm</li>
 <li>webpack</li>
 <li>babel</li>
 </ul>
-<h1>Building library</h1><p>To build your library, run <code>npm run build-lib</code></p>
-<h1>Development environments</h1><p>To start an application for testing your library,</p>
+<h2>Getting started</h2><p>Clone the repository by running this command</p>
+<pre class="prettyprint source lang-bash"><code>$ git clone https://github.com/interactive-apps/visualization.git</code></pre><p>Go to the app directory</p>
+<pre class="prettyprint source lang-bash"><code>$ cd visualization</code></pre><p>Install all required dependencies for the app</p>
+<pre class="prettyprint source lang-bash"><code>$ npm install</code></pre><h2>Development environments</h2><p>To start an application for testing your library,</p>
 <ol>
-<li><p>If you want to test your library over the browser then run <code>npm run start:browser</code>. The command will automatically open <a href="http://localhost:3000/">http://localhost:3000/</a>. on your default browser.</p>
-</li>
-<li><p>If you want to test your library over the terminal as nodejs script then run <code>npm run start:node</code></p>
-</li>
+<li><p>If you want to test your library over the browser then run</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run start:browser</code></pre></li>
 </ol>
-<p>NOTE: In both cases, the app will automatically reload if you change any of the source files inside app directory</p></article>
+<p>The command will automatically open <a href="http://localhost:3000/">http://localhost:3000/</a>. on your default browser.</p>
+<ol start="2">
+<li><p>If you want to test your library over the terminal as nodejs script then run</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run start:node</code></pre></li>
+</ol>
+<p><strong><em>NOTE</em></strong>: In both cases, the app will automatically reload if you change any of the source files inside app directory</p>
+<h2>Building library</h2><p>To build your library, run</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run build-lib</code></pre><h2>Publishing library</h2><p>Inorder to publish your library in npm, make sure you already have npm account and have already logged in to npm in the command line tool of your computer, to login to npm run</p>
+<pre class="prettyprint source lang-bash"><code>$ npm login</code></pre><p>You will be required to provide username and password for npm</p>
+<p>To publish your library to npm run</p>
+<pre class="prettyprint source lang-bash"><code>$ npm run publish</code></pre><p>If you are publishing to an npm organisation, make sure that you are member for that organisation</p></article>
     </section>
 
 
@@ -90,7 +101,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Apr 25 2019 16:51:51 GMT+0300 (East Africa Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Apr 26 2019 19:12:23 GMT+0300 (East Africa Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

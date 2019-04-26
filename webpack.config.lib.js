@@ -3,18 +3,17 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const package = require('./package.json');
+const packageDetails = require('./package.json');
 
-const libraryName = package.name;
+const libraryName = packageDetails.name;
+
 module.exports = {
   mode: 'production',
   devtool: 'inline-source-map',
   optimization: {
     minimizer: [new UglifyJsPlugin()]
   },
-  entry: {
-    main: './lib/src/index.js'
-  },
+  entry: __dirname + '/lib/src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
     filename: libraryName + '.min.js',
@@ -42,12 +41,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /(\.jsx|\.js)$/,
         exclude: /(node_modules|bower_components)/,
-        use: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/env']
+        }
       },
       {
-        test: /\.js?$/,
+        test: /(\.jsx|\.js)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /(\.jsx|\.js)$/,
         use: 'webpack-strip-log-loader'
       }
     ]
