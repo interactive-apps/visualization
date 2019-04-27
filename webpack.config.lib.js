@@ -36,7 +36,8 @@ module.exports = {
       commonjs2: 'lodash',
       amd: 'lodash',
       root: '_'
-    }
+    },
+    Fn: '@iapps/function-analytics/function-analytics.min'
   },
   module: {
     rules: [
