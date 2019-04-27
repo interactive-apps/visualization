@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>utilities/instance.util.js - Documentation</title>
+    <title>models/selection.model.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">utilities/instance.util.js</h1>
+    <h1 class="page-title">models/selection.model.js</h1>
     
 
     
@@ -41,48 +41,76 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Fn } from 'Fn';
-let _instance;
-/**
- * Visualization singleton instance to contain configurations for use in other processes
+            <pre class="prettyprint source linenums"><code>/**
+ * Selection
  */
-
-export default class Instance {
+export default class Selection {
   /**
-   * Initiates the visualization singleton instance
-   * @param configuration
-   * @static
+   * Sets organisation unit id
+   * @param {string} ou - Organisation unit id
+   * @returns {Selection} - Object with selection properties
    */
-  static initializeInstance(configuration) {
-    if (!_instance) {
-      // initialize function analytics for analytics processes
-      Fn.init(configuration);
-
-      const functionAnalyticsRunner = new Fn.Runner();
-
-      if (functionAnalyticsRunner.instance) {
-        this.config = configuration;
-        _instance = this;
-      }
-    }
+  setOrgUnit(ou) {
+    return this;
   }
 
   /**
-   * Get instance
-   * @returns {Instance}
-   * @static
+   *
+   * @param {string} pe - Period id
+   * @returns {Selection} - Object with selection properties
    */
-  static getInstance() {
-    return _instance;
+  setPeriod(pe) {
+    return this;
   }
 
   /**
-   * Get instance configuration
-   * @returns {}
+   * Sets data id
+   * @param {string} dx - Data id
+   * @returns {Selection} - Object with selection properties
    */
-  get config() {
-    return _instance ? _instance.config : null;
+  setData(dx) {
+    return this;
   }
+
+  /**
+   * Sets dynamic dimension and its value
+   * @param {string} dim - Dynamic dimension identifiers
+   * @param {string} value - Dynamic dimension options identifiers
+   * @returns {Selection} - Object with selection properties
+   */
+  setDimension(dim, value) {
+    return this;
+  }
+
+  /**
+   * Sets layout for dimension
+   * @param {string} dim - Dimension identifier eg ou, pe, dx, &lt;dim identifier>
+   * @param {string} layout - Layout to which the dimension is set
+   * @returns {Selection} - Object with selection properties
+   */
+  setLayout(dim, layout) {
+    return this;
+  }
+
+  /**
+   * Sets selections configurations
+   * @param {Object} configuration - Configuration Properties associated with set selections
+   */
+  setConfiguration(configuration) {
+    return this;
+  }
+
+  /**
+   * Sets selections layers when multiple selection layers are needed
+   * @returns {Selection} - Object with selection properties
+   */
+  setLayer() {}
+
+  /**
+   * Get selections
+   * @returns {Selection} Selection - Get Data selection
+   */
+  get() {}
 }
 </code></pre>
         </article>

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>utilities/instance.util.js - Documentation</title>
+    <title>models/view.model.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">utilities/instance.util.js</h1>
+    <h1 class="page-title">models/view.model.js</h1>
     
 
     
@@ -41,47 +41,44 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Fn } from 'Fn';
-let _instance;
-/**
- * Visualization singleton instance to contain configurations for use in other processes
+            <pre class="prettyprint source linenums"><code>/**
+ * @description View support visualizing different views
  */
-
-export default class Instance {
+export default class View {
   /**
-   * Initiates the visualization singleton instance
-   * @param configuration
-   * @static
+   * Create view
+   * @param {Selection} selectionLayers - Selection layers
    */
-  static initializeInstance(configuration) {
-    if (!_instance) {
-      // initialize function analytics for analytics processes
-      Fn.init(configuration);
+  constructor(selectionLayers) {}
 
-      const functionAnalyticsRunner = new Fn.Runner();
+  chart() {}
+  table() {}
+  map() {}
+  dictionary() {}
 
-      if (functionAnalyticsRunner.instance) {
-        this.config = configuration;
-        _instance = this;
-      }
-    }
+  /**
+   * Set Visualization type
+   * @param {string} type - Type of visualization eg. CHART, TABLE, MAP, DICTIONARY
+   * @returns {View}
+   */
+  setType(type) {
+    return this;
   }
 
   /**
-   * Get instance
-   * @returns {Instance}
-   * @static
+   * Set ui preferences for visualization
+   * @param {Object} uiPreferences - Properties to control visualization
+   * @returns {View}
    */
-  static getInstance() {
-    return _instance;
+  setUiPreferences(uiPreferences) {
+    return this;
   }
 
   /**
-   * Get instance configuration
-   * @returns {}
+   * Draw visualization
    */
-  get config() {
-    return _instance ? _instance.config : null;
+  draw() {
+    console.log('Logic to draw visualization');
   }
 }
 </code></pre>
