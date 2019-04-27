@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/view.model.js - Documentation</title>
+    <title>helpers/set-selection.helper.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/view.model.js</h1>
+    <h1 class="page-title">helpers/set-selection.helper.js</h1>
     
 
     
@@ -41,46 +41,21 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @description View support visualizing different views
+            <pre class="prettyprint source linenums"><code>import setSelectionItems from './set-selection-items.helper';
+/**
+ * Sets selection
+ * @param {string} dimension - Selection dimension eg pe, ou, dx and &lt;dim>
+ * @param {string} dimensionValue - Selection dimension value
+ * @returns {Selection} selectionIntance - Selection instance
  */
-export class View {
-  /**
-   * Create view
-   * @param {Selection} selectionLayers - Selection layers
-   */
-  constructor(selectionLayers) {}
+const setSelection = (dimension, dimensionValue) => {
+  return {
+    dimension,
+    items: setSelectionItems(dimension, dimensionValue)
+  };
+};
 
-  chart() {}
-  table() {}
-  map() {}
-  dictionary() {}
-
-  /**
-   * Set Visualization type
-   * @param {string} type - Type of visualization eg. CHART, TABLE, MAP, DICTIONARY
-   * @returns {View}
-   */
-  setType(type) {
-    return this;
-  }
-
-  /**
-   * Set ui preferences for visualization
-   * @param {Object} uiPreferences - Properties to control visualization
-   * @returns {View}
-   */
-  setUiPreferences(uiPreferences) {
-    return this;
-  }
-
-  /**
-   * Draw visualization
-   */
-  draw() {
-    console.log('Logic to draw visualization');
-  }
-}
+export default setSelection;
 </code></pre>
         </article>
     </section>

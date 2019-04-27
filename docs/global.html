@@ -26,7 +26,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Instance.html">Instance</a><ul class='methods'><li data-type='method'><a href="Instance.html#.getInstance">getInstance</a></li><li data-type='method'><a href="Instance.html#.initializeInstance">initializeInstance</a></li></ul></li><li><a href="Selection.html">Selection</a><ul class='methods'><li data-type='method'><a href="Selection.html#get">get</a></li><li data-type='method'><a href="Selection.html#setConfiguration">setConfiguration</a></li><li data-type='method'><a href="Selection.html#setData">setData</a></li><li data-type='method'><a href="Selection.html#setDimension">setDimension</a></li><li data-type='method'><a href="Selection.html#setLayer">setLayer</a></li><li data-type='method'><a href="Selection.html#setLayout">setLayout</a></li><li data-type='method'><a href="Selection.html#setOrgUnit">setOrgUnit</a></li><li data-type='method'><a href="Selection.html#setPeriod">setPeriod</a></li></ul></li><li><a href="SelectionUtil.html">SelectionUtil</a><ul class='methods'><li data-type='method'><a href="SelectionUtil.html#.setSelection">setSelection</a></li></ul></li><li><a href="View.html">View</a><ul class='methods'><li data-type='method'><a href="View.html#draw">draw</a></li><li data-type='method'><a href="View.html#setType">setType</a></li><li data-type='method'><a href="View.html#setUiPreferences">setUiPreferences</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Vn.html">Vn</a><ul class='methods'><li data-type='method'><a href="Vn.html#.getInstance">getInstance</a></li><li data-type='method'><a href="Vn.html#.init">init</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#getInstance">getInstance</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#setSelectionItems">setSelectionItems</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Instance.html">Instance</a><ul class='methods'><li data-type='method'><a href="Instance.html#.getInstance">getInstance</a></li><li data-type='method'><a href="Instance.html#.initializeInstance">initializeInstance</a></li></ul></li><li><a href="Selection.html">Selection</a><ul class='methods'><li data-type='method'><a href="Selection.html#get">get</a></li><li data-type='method'><a href="Selection.html#setConfiguration">setConfiguration</a></li><li data-type='method'><a href="Selection.html#setData">setData</a></li><li data-type='method'><a href="Selection.html#setDimension">setDimension</a></li><li data-type='method'><a href="Selection.html#setLayer">setLayer</a></li><li data-type='method'><a href="Selection.html#setLayout">setLayout</a></li><li data-type='method'><a href="Selection.html#setOrgUnit">setOrgUnit</a></li><li data-type='method'><a href="Selection.html#setPeriod">setPeriod</a></li></ul></li><li><a href="View.html">View</a><ul class='methods'><li data-type='method'><a href="View.html#draw">draw</a></li><li data-type='method'><a href="View.html#setType">setType</a></li><li data-type='method'><a href="View.html#setUiPreferences">setUiPreferences</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Vn.html">Vn</a><ul class='methods'><li data-type='method'><a href="Vn.html#.getInstance">getInstance</a></li><li data-type='method'><a href="Vn.html#.init">init</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#getInstance">getInstance</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#setSelection">setSelection</a></li><li><a href="global.html#setSelectionItems">setSelectionItems</a></li></ul>
 </nav>
 
 <div id="main">
@@ -364,6 +364,187 @@
 
     
 
+    <h4 class="name" id="setSelection"><span class="type-signature"></span>setSelection<span class="signature">(dimension, dimensionValue)</span><span class="type-signature"> &rarr; {<a href="Selection.html">Selection</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helpers_set-selection.helper.js.html">helpers/set-selection.helper.js</a>, <a href="helpers_set-selection.helper.js.html#line8">line 8</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Sets selection</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dimension</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Selection dimension eg pe, ou, dx and <dim></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dimensionValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Selection dimension value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>selectionIntance - Selection instance</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Selection.html">Selection</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="setSelectionItems"><span class="type-signature"></span>setSelectionItems<span class="signature">(dimension, dimensionValue)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 
     
@@ -560,7 +741,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 28 2019 00:22:58 GMT+0300 (East Africa Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 28 2019 00:35:50 GMT+0300 (East Africa Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
