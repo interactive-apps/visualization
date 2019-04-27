@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>models/view.model.js - Documentation</title>
+    <title>utilities/selection.util.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">models/view.model.js</h1>
+    <h1 class="page-title">utilities/selection.util.js</h1>
     
 
     
@@ -41,44 +41,23 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @description View support visualizing different views
+            <pre class="prettyprint source linenums"><code>import { setSelectionItems } from '../helpers';
+/**
+ * @description
+ * Utilities to support Selection operations
  */
-export class View {
+export class SelectionUtil {
   /**
-   * Create view
-   * @param {Selection} selectionLayers - Selection layers
+   * Sets selection
+   * @param {string} dimension - Selection dimension eg pe, ou, dx and &lt;dim>
+   * @param {string} dimensionValue - Selection dimension value
+   * @returns {Selection} selectionIntance - Selection instance
    */
-  constructor(selectionLayers) {}
-
-  chart() {}
-  table() {}
-  map() {}
-  dictionary() {}
-
-  /**
-   * Set Visualization type
-   * @param {string} type - Type of visualization eg. CHART, TABLE, MAP, DICTIONARY
-   * @returns {View}
-   */
-  setType(type) {
-    return this;
-  }
-
-  /**
-   * Set ui preferences for visualization
-   * @param {Object} uiPreferences - Properties to control visualization
-   * @returns {View}
-   */
-  setUiPreferences(uiPreferences) {
-    return this;
-  }
-
-  /**
-   * Draw visualization
-   */
-  draw() {
-    console.log('Logic to draw visualization');
+  static setSelection(dimension, dimensionValue) {
+    return {
+      dimension,
+      items: setSelectionItems(dimension, dimensionValue)
+    };
   }
 }
 </code></pre>
